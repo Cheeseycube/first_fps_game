@@ -58,58 +58,58 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Vector3 bckwd = transform.TransformDirection(Vector3.back);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-        Vector3 left = transform.TransformDirection(Vector3.left);
+        //Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        //Vector3 bckwd = transform.TransformDirection(Vector3.back);
+        //Vector3 right = transform.TransformDirection(Vector3.right);
+        //Vector3 left = transform.TransformDirection(Vector3.left);
 
-        if (Physics.Raycast(CamPos.transform.position, fwd, RayDist) && !TouchingRight)
-        {
-            ++numCols;
-            //print(numCols);
-            TouchingFwd = true;
-            TouchingBckwd = false;  // may need to do something here if player gets stuck in between two walls or something
-        }
-        else
-        {
-            TouchingFwd = false;
-        }
+        //if (Physics.Raycast(CamPos.transform.position, fwd, RayDist) && !TouchingRight)
+        //{
+        //    ++numCols;
+        //    //print(numCols);
+        //    TouchingFwd = true;
+        //    TouchingBckwd = false;  // may need to do something here if player gets stuck in between two walls or something
+        //}
+        //else
+        //{
+        //    TouchingFwd = false;
+        //}
 
-        if (Physics.Raycast(CamPos.transform.position, bckwd, RayDist) && !TouchingRight)
-        {
-            ++numCols;
-            //print(numCols);
-            TouchingBckwd = true;
-            TouchingFwd = false;
-        }
-        else
-        {
-            TouchingBckwd = false;
-        }
+        //if (Physics.Raycast(CamPos.transform.position, bckwd, RayDist) && !TouchingRight)
+        //{
+        //    ++numCols;
+        //    //print(numCols);
+        //    TouchingBckwd = true;
+        //    TouchingFwd = false;
+        //}
+        //else
+        //{
+        //    TouchingBckwd = false;
+        //}
 
-        if (Physics.Raycast(CamPos.transform.position, right, RayDist))
-        {
-            ++numCols;
-            //print(numCols);
-            TouchingRight = true;
-        }
-        else
-        {
-            TouchingRight = false;
-        }
+        //if (Physics.Raycast(CamPos.transform.position, right, RayDist))
+        //{
+        //    ++numCols;
+        //    //print(numCols);
+        //    TouchingRight = true;
+        //}
+        //else
+        //{
+        //    TouchingRight = false;
+        //}
 
-        if (Physics.Raycast(CamPos.transform.position, left, RayDist))
-        {
-            ++numCols;
-            //print(numCols);
-            TouchingLeft = true;
-        }
-        else
-        {
-            TouchingLeft = false;
-        }
+        //if (Physics.Raycast(CamPos.transform.position, left, RayDist))
+        //{
+        //    ++numCols;
+        //    //print(numCols);
+        //    TouchingLeft = true;
+        //}
+        //else
+        //{
+        //    TouchingLeft = false;
+        //}
 
-        //MoveAddForce();
+        ////MoveAddForce();
 
     }
 
