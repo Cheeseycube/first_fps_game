@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject CamPos;
     public GameObject PlayerCam;
+    [SerializeField] Rigidbody PlayerBody;
 
 
     // Start is called before the first frame update
@@ -52,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
 
-        Rotate();
+        //Rotate();
     }
 
     private void FixedUpdate()
@@ -117,10 +118,10 @@ public class PlayerMovement : MonoBehaviour
         strafe = Input.GetAxisRaw("Horizontal");
         translation = Input.GetAxisRaw("Vertical");
         Vector3 moveDirection = transform.forward * translation * speed + transform.right * strafe * speed;
-        moveDirection.y = rb.velocity.y;
+        moveDirection.y = PlayerBody.velocity.y;
         //rb.velocity = new Vector3(strafe * speed, rb.velocity.y, translation * speed);
         //rb.AddForce()
-        rb.velocity = moveDirection; // could use addforce() instead
+        PlayerBody.velocity = moveDirection; // could use addforce() instead
         //print(rb.velocity.y);
     }
 
@@ -134,11 +135,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void Rotate()
+    /*private void Rotate()
     {
         
-        transform.localRotation = Quaternion.Euler(0, PlayerCam.transform.localRotation.y, 0);
-    }
+        //transform.localRotation = Quaternion.Euler(0, PlayerCam.transform.localRotation.y, 0);
+        transform.localRotation = PlayerCam.transform.localRotation;
+    }*/
 
 
 }

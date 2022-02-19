@@ -433,6 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 330386345}
   - component: {fileID: 330386346}
+  - component: {fileID: 330386347}
   m_Layer: 0
   m_Name: RotationObjects
   m_TagString: Untagged
@@ -474,6 +475,22 @@ MonoBehaviour:
   deltaMove: {x: 0, y: 0, z: 0}
   speed: 1
   rotationLimit: 45
+--- !u!114 &330386347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330386344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e60f80b78384af499ed18f526c0d242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  CamPos: {fileID: 963194225}
+  PlayerCam: {fileID: 963194225}
+  PlayerBody: {fileID: 1664344644}
 --- !u!1 &558544200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,7 +2201,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664344639}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e60f80b78384af499ed18f526c0d242, type: 3}
   m_Name: 
@@ -2192,6 +2209,7 @@ MonoBehaviour:
   speed: 10
   CamPos: {fileID: 963194225}
   PlayerCam: {fileID: 963194225}
+  PlayerBody: {fileID: 0}
 --- !u!114 &1664344647
 MonoBehaviour:
   m_ObjectHideFlags: 0
