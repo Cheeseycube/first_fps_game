@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     public GameObject CamPos;
+    public GameObject PlayerCam;
 
 
     // Start is called before the first frame update
@@ -50,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
             PressedEscape = true;
             Cursor.lockState = CursorLockMode.None;
         }
+
+        Rotate();
     }
 
     private void FixedUpdate()
@@ -129,6 +132,12 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(moveDirection.normalized * speed * 10f, ForceMode.Acceleration);
         
 
+    }
+
+    private void Rotate()
+    {
+        
+        transform.localRotation = Quaternion.Euler(0, PlayerCam.transform.localRotation.y, 0);
     }
 
 
